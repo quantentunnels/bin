@@ -1,0 +1,7 @@
+#!/bin/bash
+# a wrapper for the bioformats tiffcomment extractor
+
+outFile="${1/%.BTF/.txt}" 
+outDir=$(dirname "${outFile}")
+
+~/bin/bioformats/tiffcomment "$1" $out > $outFile

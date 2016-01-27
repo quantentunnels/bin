@@ -1,0 +1,5 @@
+#!/bin/bash
+# a wrapper to use pdftotext with git diff
+
+#ubuntu package poppler-utils
+pdftotext "$1" -
