@@ -4,4 +4,4 @@
 outFile="${1/%.BTF/.txt}" 
 outDir=$(dirname "${outFile}")
 
-~/bin/bioformats/tiffcomment "$1" $out > $outFile
+~/bioformats/tiffcomment "$1" $out > $outFile
