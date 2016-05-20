@@ -1,0 +1,7 @@
+#!/bin/bash
+# a wrapper for the bioformats showinf tool to
+# extract .HIS file metadata
+
+outFile="${1/%.HIS/.txt}"
+
+~/bioformats/showinf -nopix -nocore "$1" $out > $outFile
