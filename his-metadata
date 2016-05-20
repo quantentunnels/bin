@@ -1,6 +1,5 @@
 #!/bin/bash
-# a wrapper for the bioformats showinf tool to
-# extract .HIS file metadata
+# a wrapper for the bioformats showinf tool to extract .HIS file metadata
 
 outFile="${1/%.HIS/.txt}"
 
