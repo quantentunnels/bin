@@ -1,0 +1,14 @@
+#!/bin/bash
+# a wrapper for the bioformats tiffcomment extractor
+
+outFile="${1/%.BTF/.txt}" 
+bfPath="/home/marius/bioformats"
+echo $outFile
+
+echo "# Bioformats core info" > "$outFile"
+$bfPath/showinf -nopix -nometa "$1" >> "$outFile"
+echo >> "$outFile"
+
+echo "# Hamamatsu metadata" >> "$outFile"
+$bfPath/tiffcomment "$1" >> "$outFile"
+sed --in-place --expression 's/;/\n/g' --expression 's/@Hokawo@/&\n/' "$outFile"

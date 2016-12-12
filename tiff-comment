@@ -1,7 +1,0 @@
-#!/bin/bash
-# a wrapper for the bioformats tiffcomment extractor
-
-outFile="${1/%.BTF/.txt}" 
-
-~/bioformats/tiffcomment "$1" $out > $outFile
-sed --in-place --expression 's/;/\n/g' --expression 's/@Hokawo@/\n&\n/' $outFile
