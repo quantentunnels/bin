@@ -1,0 +1,10 @@
+#!/bin/sh
+#wrapper for imagej macro which converts tiff stacks to Motion JPEG avi files
+
+#define absolute path of macro or specify relative to ImageJ's /macro directory
+MACROPATH="exportAvi.ijm"
+
+#generate abs paths of input for ImageJ to use
+absolutePaths=$(readlink -e $@)
+
+imagej --ij2 --headless -macro "$MACROPATH" "$absolutePaths" #&> /dev/null
