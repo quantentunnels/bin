@@ -1,0 +1,7 @@
+#!/bin/bash
+# a wrapper to use Image Magicks "compare" as a git difftool
+
+TMPDIR=$(mktemp -d /tmp/git-rasterdiff.XXX)
+compare "$1" "$2" > $TMPDIR/diff.png
+feh $TMPDIR/diff.pdf
+trap $(rm -rf $TMPDIR) EXIT
