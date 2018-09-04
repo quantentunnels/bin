@@ -1,0 +1,8 @@
+#! /bin/bash
+# Autolock settings for awesome WM
+
+exec xautolock -detectsleep 
+    -time 3 -locker "blurLock" \
+    -notify 30 \
+    -notifier "notify-send -u critical -t 10000 -- 'Bildschirm wird in 30 Sekunden gesperrt'"
+

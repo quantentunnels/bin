@@ -1,0 +1,10 @@
+#! /bin/bash
+# locks the screen w/ i3lock and displays blurred version of current view
+# (enter user password to resume)
+
+scrot /tmp/screenshot.png
+#convert /tmp/screenshot.png -blur 0x5 /tmp/screenshot-blurred.png
+#convert -scale 6.25% -scale 1600% /tmp/screenshot.png /tmp/screenshot-blurred.png
+convert -scale 10% -scale 1000% /tmp/screenshot.png /tmp/screenshot-blurred.png
+i3lock -i /tmp/screenshot-blurred.png
+
