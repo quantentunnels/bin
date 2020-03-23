@@ -1,7 +1,7 @@
 ## Remove battery designation
 s/Battery [[:digit:]]: //
 ## State
-s/Full,/●/
+s/Full,/● /
 # or ⚡
 s/Charging,/↯/
 s/Discharging,/↘/
@@ -12,9 +12,9 @@ s/Unknown/❓/
 ## Duration
 # #set time into parens
 # s,\(\([[:digit:]]{2}:\)\{2\}[[:digit:]]\{2\}\),(\2),
-s/remaining/⏱/
+s/remaining/⏱ /
 # or ⌚
-s/until charged/↸/
+s/until charged/↸ /
 # or ⇥
 
 #reserve/unused
